@@ -1,0 +1,60 @@
+
+#txtStudentId{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+#txtStudentName{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+#txtStudentAddress{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+#txtStudentContact{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+#studentDobDatePicker{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+#txtRoomType{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+#txtRoomFee{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+#txtAdvance{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+#txtRoomQty{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+#txtGender{
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+#btnAddNewCustomer{
+    -fx-background-color: #27AE60;
+    -fx-text-fill: white;
+    -fx-background-radius: 9;
+}
+#btnRegister{
+    -fx-background-color: #ff3838;
+    -fx-text-fill: white;
+    -fx-background-radius: 9;
+}

@@ -1,0 +1,20 @@
+
+.textPane{
+    -fx-background-color: white;
+    -fx-border-color: rgba(76, 73, 73, 0.83);
+    -fx-opacity: 0.99;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 25px;
+}
+.textField{
+    -fx-background-color: white;
+    -fx-prompt-text-fill: #726d6d;
+}
+.textLabel{
+    -fx-background-color: white;
+    -fx-padding: 0 5px 0px 5px;
+    -fx-font-weight: bold;
+    -fx-opacity: 100;
+    -fx-text-fill: rgba(76, 73, 73, 0.83);;
+}
+

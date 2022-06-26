@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootContext" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #2f3640;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.D24_Hostel.controller.DashBoardFormController">
+   <children>
+      <Rectangle arcHeight="500.0" arcWidth="400.0" height="488.0" layoutX="-75.0" layoutY="90.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="913.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="116.0" prefHeight="54.0" prefWidth="333.0" text="DASHBOARD" textFill="#eaeaeb">
+         <font>
+            <Font name="Bell MT Bold" size="45.0" />
+         </font>
+         <effect>
+            <DropShadow height="48.99" radius="19.33" width="30.33" />
+         </effect>
+      </Label>
+      <ImageView fx:id="imgReserve" fitHeight="173.0" fitWidth="156.0" layoutX="93.0" layoutY="253.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true">
+         <image>
+            <Image url="@assets/images/booking-online.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgRoom" fitHeight="173.0" fitWidth="181.0" layoutX="343.0" layoutY="257.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true">
+         <image>
+            <Image url="@assets/images/bedroom.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="lblMenu" alignment="CENTER" layoutY="452.0" prefHeight="53.0" prefWidth="829.0" text="Welcome" textAlignment="CENTER" textFill="#6758da">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" layoutY="509.0" prefHeight="19.0" prefWidth="829.0" text="Please select one of above main operations to proceed" textAlignment="CENTER">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="355.0" layoutY="142.0" prefHeight="7.0" prefWidth="345.0" />
+      <Label alignment="CENTER" layoutY="550.0" prefHeight="21.0" prefWidth="829.0" text="Copyright © 2022 D24 Hostel.  All Right Reserved Design By Pasan Pahasara" textAlignment="CENTER" />
+      <ImageView fx:id="imgFindRemainKeyMoney" fitHeight="173.0" fitWidth="181.0" layoutX="599.0" layoutY="255.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true">
+         <image>
+            <Image url="@assets/images/investing.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="59.0" fitWidth="69.0" layoutX="481.0" layoutY="11.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/images/logo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblTime" layoutX="833.0" layoutY="72.0" prefHeight="90.0" prefWidth="241.0" text="04:30 PM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="53.0" />
+         </font>
+      </Label>
+      <Text fill="#cacbc3" layoutX="573.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ostel">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#cacbc3" layoutX="555.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fill="#cacbc3" layoutX="523.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D24">
+         <font>
+            <Font name="Leelawadee UI Bold" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="42.0" fitWidth="47.0" layoutX="1038.0" layoutY="19.0" onMouseClicked="#logOutOnMouseClicked" onMouseEntered="#mouseEnterAnimation" onMouseExited="#mouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/images/turn-off.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" layoutX="910.0" layoutY="126.0" prefHeight="90.0" prefWidth="169.0" text="02/05/2022" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="173.0" fitWidth="181.0" layoutX="876.0" layoutY="247.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/images/account-manager.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="912.0" layoutY="438.0" onAction="#manageUsersOnAction" style="-fx-background-color: red;" text="Manage Users" textFill="WHITE" />
+   </children>
+</AnchorPane>

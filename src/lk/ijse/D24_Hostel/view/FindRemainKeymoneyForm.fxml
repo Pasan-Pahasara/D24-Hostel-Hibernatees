@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #F3F3F3;" stylesheets="@assets/styles/manageStudentForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.D24_Hostel.controller.FindRemainKeyMoneyFormController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="970.0" layoutX="130.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/images/Background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="130.0" prefHeight="650.0" prefWidth="970.0" style="-fx-background-color: #2c3e50; -fx-opacity: 15%;">
+         <effect>
+            <DropShadow height="118.64" radius="52.91" width="95.0" />
+         </effect>
+      </AnchorPane>
+      <Rectangle arcHeight="250.0" arcWidth="300.0" fill="#2f3640" height="745.0" layoutX="-158.0" layoutY="-76.0" stroke="#1b1e22" strokeType="INSIDE" strokeWidth="10.0" width="357.0" />
+      <AnchorPane layoutX="233.0" layoutY="152.0" prefHeight="419.0" prefWidth="831.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#cdcdcd" offsetY="4.0" />
+         </effect>
+      </AnchorPane>
+      <Label layoutX="225.0" layoutY="22.0" text="Find Remain Keymoney Form" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="33.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="154.0" fitWidth="176.0" layoutX="-16.0" layoutY="196.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/images/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView id="imgHome" fitHeight="53.0" fitWidth="55.0" layoutX="22.0" layoutY="19.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/images/home.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Separator layoutX="690.0" layoutY="43.0" prefHeight="4.0" prefWidth="372.0" />
+      <Text fill="#cacbc3" layoutX="86.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D24">
+         <font>
+            <Font name="Leelawadee UI Bold" size="48.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="60.0" arcWidth="60.0" fill="#2f3640" height="77.0" layoutX="21.0" layoutY="518.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="149.0" />
+      <Label fx:id="lblTime" layoutX="39.0" layoutY="529.0" prefHeight="59.0" prefWidth="114.0" text="14:30:55 PM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSearch" focusColor="WHITE" layoutX="278.0" layoutY="82.0" promptText="Search" unFocusColor="WHITE" />
+      <ImageView fitHeight="40.0" fitWidth="53.0" layoutX="223.0" layoutY="79.0" onMouseClicked="#searchMouseClickedOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/images/searchimage.png" />
+         </image>
+      </ImageView>
+      <Text fill="#cacbc3" layoutX="79.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ostel">
+         <font>
+            <Font name="Sitka Display" size="28.0" />
+         </font>
+      </Text>
+      <Text fill="#cacbc3" layoutX="39.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H">
+         <font>
+            <Font name="Sitka Display" size="60.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblFindRemainKeyMoney" layoutX="243.0" layoutY="160.0" prefHeight="404.0" prefWidth="812.0" style="-fx-border-color: #33A4DA;">
+         <columns>
+            <TableColumn prefWidth="95.0" text="Register ID" />
+            <TableColumn prefWidth="99.0" text="Student ID" />
+            <TableColumn prefWidth="143.0" text="Room Type ID" />
+            <TableColumn prefWidth="121.0" text="Date" />
+            <TableColumn prefWidth="137.0" text="Room Fee" />
+            <TableColumn prefWidth="119.0" text="Advance" />
+            <TableColumn prefWidth="94.0" text="Status" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

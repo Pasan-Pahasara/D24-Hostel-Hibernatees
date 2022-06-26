@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #F3F3F3;" stylesheets="@assets/styles/reserveForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.D24_Hostel.controller.ReserveFormController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="970.0" layoutX="130.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/images/Background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="130.0" prefHeight="650.0" prefWidth="970.0" style="-fx-background-color: #2c3e50; -fx-opacity: 15%;">
+         <effect>
+            <DropShadow height="118.64" radius="52.91" width="95.0" />
+         </effect>
+      </AnchorPane>
+      <Rectangle arcHeight="250.0" arcWidth="300.0" fill="#2f3640" height="745.0" layoutX="-158.0" layoutY="-76.0" stroke="#1b1e22" strokeType="INSIDE" strokeWidth="10.0" width="357.0" />
+      <AnchorPane layoutX="238.0" layoutY="155.0" opacity="0.13" prefHeight="235.0" prefWidth="814.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#cdcdcd" offsetY="4.0" />
+         </effect>
+      </AnchorPane>
+      <ImageView fitHeight="154.0" fitWidth="176.0" layoutX="-16.0" layoutY="196.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/images/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView id="imgHome" fitHeight="53.0" fitWidth="55.0" layoutX="22.0" layoutY="19.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/images/home.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Text fill="#cacbc3" layoutX="86.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D24">
+         <font>
+            <Font name="Leelawadee UI Bold" size="48.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="60.0" arcWidth="60.0" fill="#2f3640" height="77.0" layoutX="21.0" layoutY="518.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="149.0" />
+      <Label fx:id="lblTime" layoutX="39.0" layoutY="529.0" prefHeight="59.0" prefWidth="114.0" text="14:30:55 PM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Text fill="#cacbc3" layoutX="79.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ostel">
+         <font>
+            <Font name="Sitka Display" size="28.0" />
+         </font>
+      </Text>
+      <Text fill="#cacbc3" layoutX="39.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H">
+         <font>
+            <Font name="Sitka Display" size="60.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="264.0" layoutY="455.0" opacity="0.13" prefHeight="154.0" prefWidth="767.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#cdcdcd" offsetY="4.0" />
+         </effect>
+      </AnchorPane>
+      <Label layoutX="225.0" layoutY="22.0" text="Register Detail Form" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="33.0" />
+         </font>
+      </Label>
+      <Separator layoutX="575.0" layoutY="43.0" prefHeight="1.0" prefWidth="324.0" />
+      <JFXButton id="btnAddNewCustomer" fx:id="btnAddNewStudent" buttonType="RAISED" layoutX="937.0" layoutY="24.0" onAction="#btnAddNewStudentOnAction" prefHeight="35.0" prefWidth="141.0" style="-fx-cursor: hand;" text="Add New Student" />
+      <Line fx:id="line2" endX="85.0" layoutX="932.0" layoutY="553.0" startX="-93.5" />
+      <Line fx:id="line3" endX="85.0" layoutX="933.0" layoutY="587.0" startX="-93.5" />
+      <Line fx:id="line4" endX="85.0" layoutX="933.0" layoutY="592.0" startX="-93.5" />
+      <Label fx:id="statusLbl" layoutX="273.0" layoutY="558.0" text="Status (Rs)" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="advanceLbl" layoutX="273.0" layoutY="513.0" text="Advance (Rs)" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="roomFeeLbl" layoutX="273.0" layoutY="468.0" text="Room Fee (Rs)" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRoomFee" alignment="CENTER_RIGHT" layoutX="837.0" layoutY="468.0" prefHeight="27.0" prefWidth="179.0" text="0.00" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStatus" alignment="CENTER_RIGHT" layoutX="837.0" layoutY="558.0" prefHeight="27.0" prefWidth="179.0" text="0.00" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="238.0" layoutY="82.0" opacity="0.29" prefHeight="40.0" prefWidth="814.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#cdcdcd" offsetY="4.0" />
+         </effect>
+      </AnchorPane>
+      <Label fx:id="lblRegisterID" alignment="CENTER_RIGHT" layoutX="350.0" layoutY="90.0" prefHeight="26.0" prefWidth="101.0" text="RID-001" textFill="#e80000">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" alignment="CENTER_RIGHT" layoutX="923.0" layoutY="89.0" prefHeight="26.0" prefWidth="101.0" text="2022-06-16">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="802.0" layoutY="89.0" text="Register Date :-">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="267.0" layoutY="89.0" text="Register ID :-">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnRegister" buttonType="RAISED" layoutX="891.0" layoutY="406.0" onAction="#btnRegister_OnAction" prefHeight="37.0" prefWidth="141.0" text="Register">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtStudentId" focusColor="WHITE" labelFloat="true" layoutX="267.0" layoutY="164.0" onKeyReleased="#searchKeyReleasedOnAction" prefHeight="31.0" prefWidth="340.0" promptText="Student ID :" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtStudentName" disable="true" focusColor="WHITE" labelFloat="true" layoutX="267.0" layoutY="209.0" prefHeight="31.0" prefWidth="340.0" promptText="Name :" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtStudentAddress" disable="true" focusColor="WHITE" labelFloat="true" layoutX="267.0" layoutY="254.0" prefHeight="31.0" prefWidth="340.0" promptText="Student Address :" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtStudentContact" disable="true" focusColor="#fbfcff" labelFloat="true" layoutX="267.0" layoutY="299.0" prefHeight="31.0" prefWidth="340.0" promptText="Contact :" unFocusColor="WHITE" />
+      <JFXDatePicker fx:id="studentDobDatePicker" disable="true" layoutX="267.0" layoutY="344.0" prefHeight="31.0" prefWidth="155.0" promptText="DOB :">
+         <effect>
+            <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+         </effect>
+      </JFXDatePicker>
+      <JFXComboBox fx:id="cmbRoomID" focusColor="WHITE" layoutX="663.0" layoutY="164.0" prefHeight="31.0" prefWidth="358.0" promptText="Room Type ID :" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+         </effect></JFXComboBox>
+      <JFXTextField fx:id="txtRoomType" disable="true" focusColor="WHITE" labelFloat="true" layoutX="663.0" layoutY="227.0" prefHeight="31.0" prefWidth="358.0" promptText="Room Type :" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtRoomFee" disable="true" focusColor="WHITE" labelFloat="true" layoutX="663.0" layoutY="285.0" prefHeight="31.0" prefWidth="358.0" promptText="Key Money (LKR) :" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtRoomQty" disable="true" labelFloat="true" layoutX="663.0" layoutY="338.0" prefHeight="31.0" prefWidth="358.0" promptText="Room Qty :" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtAdvance" alignment="BASELINE_RIGHT" focusColor="WHITE" layoutX="837.0" layoutY="513.0" onKeyReleased="#advanceOnAction" prefHeight="39.0" prefWidth="179.0" promptText="0.00" unFocusColor="BLACK">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtGender" disable="true" focusColor="WHITE" labelFloat="true" layoutX="451.0" layoutY="344.0" prefWidth="155.0" promptText="Gender :" unFocusColor="#f8f8f8" />
+   </children>
+</AnchorPane>

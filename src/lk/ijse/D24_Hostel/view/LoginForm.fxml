@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootLog" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #2f3640;" stylesheets="@assets/styles/loginForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.D24_Hostel.controller.LoginFormController">
+   <children>
+      <Rectangle id="red" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="106.0" layoutX="879.0" layoutY="38.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="221.0" />
+      <Arc fill="DODGERBLUE" layoutX="888.0" layoutY="91.0" length="270.0" radiusX="60.0" radiusY="53.0" startAngle="45.0" stroke="DODGERBLUE" strokeType="INSIDE" type="ROUND" />
+      <Rectangle id="red" arcHeight="5.0" arcWidth="5.0" fill="#0c4b6a" height="106.0" layoutX="956.0" layoutY="177.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="144.0" />
+      <Arc fill="#0c4b6a" layoutX="965.0" layoutY="230.0" length="270.0" radiusX="60.0" radiusY="53.0" startAngle="45.0" stroke="#0c4b6a" strokeType="INSIDE" type="ROUND" />
+      <AnchorPane layoutX="133.0" layoutY="91.0" prefHeight="472.0" prefWidth="840.0" style="-fx-background-color: white; -fx-background-radius: 25;">
+         <children>
+            <AnchorPane prefHeight="472.0" prefWidth="420.0" style="-fx-background-color: #EDF0F5; -fx-background-radius: 25;" />
+            <ImageView fitHeight="283.0" fitWidth="396.0" layoutX="13.0" layoutY="77.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/images/loader.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="80.0" fitWidth="91.0" layoutX="-3.0" layoutY="1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/images/Logo.png" />
+               </image>
+            </ImageView>
+            <Text fill="#cacbc3" layoutX="53.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D24">
+               <font>
+                  <Font name="Leelawadee UI Bold" size="33.0" />
+               </font>
+            </Text>
+            <Text fill="#cacbc3" layoutX="51.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ostel">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text fill="#cacbc3" layoutX="27.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Rectangle id="red" arcHeight="5.0" arcWidth="5.0" fill="#0c4b6a" height="106.0" layoutY="370.0" rotate="180.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="144.0" />
+      <Arc fill="#0c4b6a" layoutX="159.0" layoutY="423.0" length="270.0" radiusX="60.0" radiusY="53.0" rotate="180.0" startAngle="45.0" stroke="#0c4b6a" strokeType="INSIDE" type="ROUND" />
+      <Rectangle id="red" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="106.0" layoutY="510.0" rotate="180.0" stroke="DODGERBLUE" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="221.0" />
+      <Arc fill="DODGERBLUE" layoutX="235.0" layoutY="563.0" length="270.0" radiusX="60.0" radiusY="53.0" rotate="180.0" startAngle="45.0" stroke="DODGERBLUE" strokeType="INSIDE" type="ROUND" />
+      <Label layoutX="752.0" layoutY="531.0" text="©Powered by ">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="841.0" layoutY="531.0" text="Pasan Pahasara" textFill="#116fbf">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </Label>
+      <Pane layoutX="620.0" layoutY="166.0" prefHeight="318.0" prefWidth="284.0">
+         <children>
+            <Text fill="#221a4e" layoutX="80.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+               <font>
+                  <Font name="Bell MT Bold" size="52.0" />
+               </font>
+            </Text>
+            <VBox layoutX="5.0" layoutY="72.0" prefHeight="145.0" prefWidth="272.0">
+               <children>
+                  <AnchorPane prefHeight="42.0" prefWidth="261.0" styleClass="textPane">
+                     <children>
+                        <TextField fx:id="txtUserName" layoutX="13.0" layoutY="8.0" onKeyReleased="#userNameKeyReleased" prefHeight="31.0" prefWidth="243.0" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="User Name">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="25.0" fitWidth="22.0" layoutX="230.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/users.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="42.0" prefWidth="438.0" styleClass="textPane">
+                     <children>
+                        <PasswordField fx:id="txtPassword" layoutX="15.0" layoutY="8.0" onKeyReleased="#passwordKeyReleased" prefHeight="31.0" prefWidth="243.0" styleClass="textField" />
+                        <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Password">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblHide" layoutX="231.0" layoutY="8.0" onMousePressed="#showPasswordOnMousePressed" onMouseReleased="#hidePasswordOnMousePressed" prefHeight="24.0" prefWidth="24.0">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/images/hide.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <JFXButton buttonType="RAISED" onAction="#loginOnAction" prefHeight="44.0" prefWidth="272.0" style="-fx-background-color: #0c4b6a; -fx-background-radius: 15;" text="Sign in" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="126.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/loading-buffering.gif" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="263.0" prefHeight="35.0" prefWidth="151.0" text="Foget Your Password ?" textFill="#ac80c4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Text layoutX="235.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to  ">
+         <effect>
+            <DropShadow height="115.33" radius="83.34" spread="0.52" width="220.03" />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="332.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D24 Hostel">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow height="111.95" radius="45.1775" width="70.76" />
+         </effect>
+      </Text>
+      <Label layoutX="209.0" layoutY="471.0" text="D24 Hostel – It may be just the place for you!">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow height="76.98" radius="51.205" spread="0.21" width="129.84" />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

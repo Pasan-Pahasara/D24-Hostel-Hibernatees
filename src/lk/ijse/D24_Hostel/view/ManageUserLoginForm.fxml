@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #F3F3F3;" stylesheets="@assets/styles/manageUsersForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.D24_Hostel.controller.ManageUserLoginFormController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="970.0" layoutX="130.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/images/Background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="130.0" layoutY="1.0" prefHeight="650.0" prefWidth="970.0" style="-fx-background-color: #2c3e50; -fx-opacity: 15%;">
+         <effect>
+            <DropShadow height="118.64" radius="52.91" width="95.0" />
+         </effect>
+      </AnchorPane>
+      <Rectangle arcHeight="250.0" arcWidth="300.0" fill="#2f3640" height="745.0" layoutX="-158.0" layoutY="-76.0" stroke="#1b1e22" strokeType="INSIDE" strokeWidth="10.0" width="357.0" />
+      <AnchorPane layoutX="442.0" layoutY="133.0" prefHeight="442.0" prefWidth="635.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#cdcdcd" offsetY="4.0" />
+         </effect>
+      </AnchorPane>
+      <Label layoutX="225.0" layoutY="22.0" text="Manage Users" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="33.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddNewUser" buttonType="RAISED" layoutX="942.0" layoutY="26.0" onAction="#btnAddNewOnAction" prefHeight="35.0" prefWidth="133.0" style="-fx-cursor: hand;" text="+ New User" />
+      <ImageView fitHeight="154.0" fitWidth="176.0" layoutX="-16.0" layoutY="196.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/images/logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton id="btnSave" fx:id="btnSave" buttonType="RAISED" layoutX="971.0" layoutY="597.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="106.0" style="-fx-cursor: hand;" text="Save" />
+      <JFXButton id="btnDelete" fx:id="btnDelete" buttonType="RAISED" layoutX="993.0" layoutY="74.0" onAction="#btnDelete_OnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-cursor: hand;" text="Delete" />
+      <ImageView id="imgHome" fitHeight="53.0" fitWidth="55.0" layoutX="22.0" layoutY="19.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/images/back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TableView fx:id="tblUsers" layoutX="452.0" layoutY="142.0" prefHeight="423.0" prefWidth="616.0" style="-fx-border-color: #33A4DA;">
+        <columns>
+          <TableColumn prefWidth="90.0" text="User ID" />
+            <TableColumn prefWidth="110.0" text="Name" />
+            <TableColumn prefWidth="105.0" text="Address" />
+            <TableColumn prefWidth="113.0" text="Contact" />
+            <TableColumn prefWidth="118.0" text="Password" />
+            <TableColumn prefWidth="75.0" text="Gender" />
+        </columns>
+      </TableView>
+      <Separator layoutX="461.0" layoutY="42.0" prefHeight="5.0" prefWidth="452.0" />
+      <AnchorPane layoutX="211.0" layoutY="178.0" opacity="0.12" prefHeight="348.0" prefWidth="218.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" color="#cdcdcd" offsetY="4.0" />
+         </effect>
+      </AnchorPane>
+      <JFXTextField fx:id="txtUserAddress" focusColor="WHITE" labelFloat="true" layoutX="229.0" layoutY="299.0" prefHeight="31.0" prefWidth="176.0" promptText="User Address :" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtUserName" focusColor="WHITE" labelFloat="true" layoutX="229.0" layoutY="245.0" prefHeight="31.0" prefWidth="176.0" promptText="User Name :" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtUserContact" focusColor="#fbfcff" labelFloat="true" layoutX="229.0" layoutY="353.0" prefHeight="31.0" prefWidth="176.0" promptText="Contact :" unFocusColor="WHITE" />
+      <JFXComboBox fx:id="cmbUserGenderID" focusColor="WHITE" layoutX="230.0" layoutY="464.0" prefHeight="31.0" prefWidth="176.0" promptText="Gender :" unFocusColor="#f8f4f4">
+         <effect>
+            <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+         </effect></JFXComboBox>
+      <JFXTextField fx:id="txtUserId" focusColor="WHITE" labelFloat="true" layoutX="229.0" layoutY="191.0" prefHeight="31.0" prefWidth="176.0" promptText="User ID :" unFocusColor="WHITE" />
+      <Text fill="#cacbc3" layoutX="86.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D24">
+         <font>
+            <Font name="Leelawadee UI Bold" size="48.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="60.0" arcWidth="60.0" fill="#2f3640" height="77.0" layoutX="21.0" layoutY="518.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" width="149.0" />
+      <Label fx:id="lblTime" layoutX="39.0" layoutY="529.0" prefHeight="59.0" prefWidth="114.0" text="14:30:22 PM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSearch" focusColor="WHITE" layoutX="278.0" layoutY="82.0" promptText="Search" unFocusColor="WHITE" />
+      <ImageView fitHeight="40.0" fitWidth="53.0" layoutX="223.0" layoutY="79.0" onMouseClicked="#searchMouseClickedOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/images/searchimage.png" />
+         </image>
+      </ImageView>
+      <Text fill="#cacbc3" layoutX="79.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ostel">
+         <font>
+            <Font name="Sitka Display" size="28.0" />
+         </font>
+      </Text>
+      <Text fill="#cacbc3" layoutX="39.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H">
+         <font>
+            <Font name="Sitka Display" size="60.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtUserPassword" focusColor="#fbfcff" labelFloat="true" layoutX="229.0" layoutY="407.0" prefHeight="31.0" prefWidth="176.0" promptText="Password :" unFocusColor="WHITE" />
+   </children>
+</AnchorPane>
