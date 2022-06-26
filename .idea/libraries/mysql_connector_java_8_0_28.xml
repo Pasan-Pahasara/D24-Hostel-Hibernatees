@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="mysql-connector-java-8.0.28">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../Super-Market-Hibernate/src/lk/ijse/hibernate/lib/mysql-connector-java-8.0.28.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
