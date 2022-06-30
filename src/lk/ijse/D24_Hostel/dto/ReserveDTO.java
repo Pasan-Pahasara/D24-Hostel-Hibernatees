@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 /**
  * @author : Pasan Pahasara
@@ -24,8 +23,8 @@ public class ReserveDTO {
     private Double room_fee;
     private Double advance;
     private String status;
-//
-//    public ReserveDTO(String res_id, LocalDate date, Student student_id, Room room_type_id, String status) {
-//
-//    }
+
+    public ReserveDTO(String res_id, LocalDate date, Student student_id, Room room_type_id, String status) {
+
+    }
 }

@@ -10,10 +10,14 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.util.Duration;
 import lk.ijse.D24_Hostel.bo.BOFactory;
 import lk.ijse.D24_Hostel.bo.custom.LoginBO;
 import lk.ijse.D24_Hostel.dto.LoginDTO;
+import lk.ijse.D24_Hostel.util.Notification;
 import lk.ijse.D24_Hostel.util.UILoader;
+import tray.animations.AnimationType;
+import tray.notification.NotificationType;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -45,11 +49,12 @@ public class LoginFormController {
             if (txtUserName.getText().equals(temp.getName())) {
                 if (txtPassword.getText().equals(temp.getPassword())) {
                     UILoader.SetUi("DashBoardForm", rootLog);
+                    Notification.playNotification(AnimationType.POPUP, "Login Successfully!", NotificationType.SUCCESS, Duration.millis(3000));
                 } else {
-//                    passwordWarningMessage.setVisible(true);
+                    Notification.playNotificationMessage(AnimationType.POPUP, "Login Unsuccessfully!","Please Check Your User Name or Password ", NotificationType.WARNING, Duration.millis(3000));
                 }
             } else {
-//                lblUserNameWarningMessage.setVisible(true);
+                Notification.playNotificationMessage(AnimationType.POPUP, "Login Unsuccessfully!","Please Check Your User Name or Password ", NotificationType.WARNING, Duration.millis(3000));
             }
         }
     }

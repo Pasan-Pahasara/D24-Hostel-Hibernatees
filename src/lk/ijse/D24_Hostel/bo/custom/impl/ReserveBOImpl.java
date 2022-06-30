@@ -35,14 +35,12 @@ public class ReserveBOImpl implements ReserveBO {
         Transaction transaction = session.beginTransaction();
         Student student = session.get(Student.class,dto.getStudent_id());
         Room room = session.get(Room.class, dto.getRoom_type_id());
-
-//        int roomQty= Integer.parseInt(room.getQty());
-//        int qty =1;
-//        Query query = session.createQuery("UPDATE Room SET qty=? WHERE room_type_id =: id");
-//        query.setParameter("id",roomQty-qty).uniqueResult();
+        int rQty = Integer.parseInt(room.getQty());
 
         Reserve reserve = new Reserve(dto.getRes_id(), dto.getDate(),student,room, dto.getRoom_fee(), dto.getAdvance(), dto.getStatus());
         session.save(reserve);
+        room.setQty(String.valueOf(rQty - 1));
+        session.update(room);
         transaction.commit();
         session.close();
         return true;

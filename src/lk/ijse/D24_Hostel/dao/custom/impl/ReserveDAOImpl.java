@@ -25,7 +25,7 @@ public class ReserveDAOImpl implements ReserveDAO {
         String s = (String) query.uniqueResult();
         transaction.commit();
         session.close();
-        if (s!=null) {
+        if (s != null) {
             int newStudentId = Integer.parseInt(s.replace("RID-", "")) + 1;
             return String.format("RID-%03d", newStudentId);
         }
